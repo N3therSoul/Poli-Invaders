@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Poli Invaders:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Poli_Invaders_jar</output-path>
+    <root id="archive" name="Poli Invaders.jar">
+      <element id="module-output" name="Poli Invaders" />
+    </root>
+  </artifact>
+</component>

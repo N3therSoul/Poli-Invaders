@@ -1,0 +1,6 @@
+package me.nether.polinvaders.events;
+
+import com.darkmagician6.eventapi.events.Event;
+
+public class EventTick implements Event {
+}
