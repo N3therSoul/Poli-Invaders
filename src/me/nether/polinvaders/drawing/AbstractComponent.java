@@ -1,10 +1,5 @@
 package me.nether.polinvaders.drawing;
 
-import me.nether.polinvaders.Main;
-
-import javax.swing.*;
-import java.awt.*;
-
 public abstract class AbstractComponent {
 
     public float x, y;

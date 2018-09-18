@@ -4,13 +4,14 @@ import com.darkmagician6.eventapi.EventTarget;
 import me.nether.polinvaders.Main;
 import me.nether.polinvaders.drawing.AbstractBuff;
 import me.nether.polinvaders.events.EventTick;
+import me.nether.polinvaders.levels.casta.LuigiDiMaio;
 
 public class SizeBuff extends AbstractBuff {
 
     public float ratio;
 
-    public SizeBuff(float x, float y, int width, int height, float ratio) {
-        super("Size_Buff", x, y, width, height, "sizebuff.png", 50000);
+    public SizeBuff(float x, float y, int width, int height, float ratio, int duration) {
+        super("Size_Buff", x, y, width, height, "sizebuff.png", duration);
         this.ratio = ratio;
         this.maxDuration = 60000;
         this.stackable = true;
@@ -31,14 +32,14 @@ public class SizeBuff extends AbstractBuff {
 
     @Override
     public void onEnable() {
-        Main.DISPLAY.currentLevel.player.bulletSize += ratio;
+        ((LuigiDiMaio)Main.DISPLAY.currentLevel.player).bulletSize.value += this.ratio;
 
         super.onEnable();
     }
 
     @Override
     public void onDisable() {
-        Main.DISPLAY.currentLevel.player.bulletSize -= ratio * currentStacks;
+        ((LuigiDiMaio)Main.DISPLAY.currentLevel.player).bulletSize.value -= ratio * currentStacks;
 
         super.onDisable();
     }

@@ -7,6 +7,7 @@ import me.nether.polinvaders.menu.AbstractMenu;
 import me.nether.polinvaders.menu.types.components.BasicButton;
 import me.nether.polinvaders.menu.types.components.StatButton;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,11 +23,20 @@ public class Shop extends AbstractMenu {
     public void init() {
         Main.paused = true;
         Main.DISPLAY.currentLevel.player.timer2.reset();
-        BasicButton resume = new BasicButton("MEME", Main.WIDTH / 2, Main.HEIGHT / 2 - 400, 200, 50) {
+        BasicButton resume = new BasicButton("RIESUMA", Main.WIDTH / 2, Main.HEIGHT / 2 - 400, 200, 50) {
             @Override
             public void init() {
                 super.init();
                 onExit();
+            }
+        };
+
+        BasicButton random = new BasicButton("Points: \247a0", 420, Main.HEIGHT - 100, 200, 50) {
+            @Override
+            public void draw(Graphics2D g) {
+                super.draw(g);
+                this.button = "Points: \247c" + ((LuigiDiMaio) Main.DISPLAY.currentLevel.player).spendablePoints;
+
             }
         };
 
@@ -49,6 +59,7 @@ public class Shop extends AbstractMenu {
         }
 
         this.buttonList.add(resume);
+        this.buttonList.add(random);
     }
 
     @Override

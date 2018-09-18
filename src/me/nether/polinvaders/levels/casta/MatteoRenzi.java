@@ -16,33 +16,35 @@ public class MatteoRenzi extends Entity implements HasLifeBar {
         this.level = level;
     }
 
+    private int count = 0;
+
     @Override
     public void onUpdate() {
         super.onUpdate();
         if (this.toDelete) return;
 
-        if (timer.hasReach(2000)) {
+        if (timer.hasReach(5000)) {
 
-            int jobsAct = this.level * 4;
+            int jobsAct = 6 * this.level;
 
-            int phi = (int) MathUtils.range(0, 90);
+            int phi = count * 180 / jobsAct;
 
-            for (int i = (level > 2 ? -90 : phi); i < (level > 2 ? 90 : 360 + phi); i += 360 / jobsAct) {
+            for (int i = (level > 5 ? -90 : phi); i < (level > 2 ? 90 : 360 + phi); i += 360 / jobsAct) {
 
                 int x = (int) (Math.sin(Math.toRadians(i)) * this.width + this.x);
                 int y = (int) (Math.cos(Math.toRadians(i)) * this.width + this.y);
 
                 JobsAct jAct = new JobsAct(x, y, (int) this.width / 2, (int) this.height / 2, 1);
-                jAct.lifePoints = 2 * level;
+                jAct.lifePoints = 1 * level;
 
                 jAct.ySpeed = this.ySpeed;
-                if (this.level > 1) {
+                if (this.level > 3) {
                     int x1 = (int) (Math.sin(Math.toRadians(i)) * this.width * 2 + this.x);
                     int y1 = (int) (Math.cos(Math.toRadians(i)) * this.width * 2 + this.y);
 
                     OttantaEuro ottanta = new OttantaEuro(x1, y1, (int) this.width / 2, (int) this.height / 2, 1);
                     ottanta.lifePoints = 1;
-                    ottanta.yAcc = 0.05f;
+                    ottanta.yAcc = 0.02f;
                 }
             }
 
@@ -67,5 +69,4 @@ public class MatteoRenzi extends Entity implements HasLifeBar {
             timer.reset();
         }
     }
-
 }

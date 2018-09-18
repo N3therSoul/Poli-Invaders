@@ -4,13 +4,14 @@ import com.darkmagician6.eventapi.EventTarget;
 import me.nether.polinvaders.Main;
 import me.nether.polinvaders.drawing.AbstractBuff;
 import me.nether.polinvaders.events.EventTick;
+import me.nether.polinvaders.levels.casta.LuigiDiMaio;
 
 public class SpeedBuff extends AbstractBuff {
 
     public int shots;
 
-    public SpeedBuff(float x, float y, int width, int height, int shots) {
-        super("Speed_Buff", x, y, width, height, "speedbuff.png", 15000);
+    public SpeedBuff(float x, float y, int width, int height, int shots, int duration) {
+        super("Speed_Buff", x, y, width, height, "speedbuff.png", duration);
         this.shots = shots;
         this.maxDuration = 60000;
         this.stackable = true;
@@ -31,14 +32,14 @@ public class SpeedBuff extends AbstractBuff {
 
     @Override
     public void onEnable() {
-        Main.DISPLAY.currentLevel.player.bulletsPerSecond += this.shots;
+        ((LuigiDiMaio) Main.DISPLAY.currentLevel.player).attackSpeed.value += this.shots;
 
         super.onEnable();
     }
 
     @Override
     public void onDisable() {
-        Main.DISPLAY.currentLevel.player.bulletsPerSecond -= this.shots * currentStacks;
+        ((LuigiDiMaio) Main.DISPLAY.currentLevel.player).attackSpeed.value -= this.shots;
 
         super.onDisable();
     }

@@ -2,6 +2,7 @@ package me.nether.polinvaders.menu.types.components;
 
 import me.nether.polinvaders.menu.AbstractButton;
 import me.nether.polinvaders.utils.ColorUtils;
+import me.nether.polinvaders.utils.RenderUtils;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -38,7 +39,7 @@ public class BasicButton extends AbstractButton implements MouseListener {
         double sWidth = g.getFontMetrics().stringWidth(button);
         double sHeight = g.getFontMetrics().getHeight();
 
-        g.drawString(button, (int) (x - sWidth / 2) + 1, (int) (y + sHeight / 4) + 1);
+        RenderUtils.drawString(g, button, (int) (x - sWidth / 2) + 1, (int) (y + sHeight / 4) + 1, 0xffffffff);
     }
 
     public void init() {
@@ -48,7 +49,6 @@ public class BasicButton extends AbstractButton implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         if (this.isHovered(e.getX(), e.getY())) {
             this.init();
-            System.out.println("meme");
         }
     }
 

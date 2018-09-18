@@ -29,20 +29,9 @@ public abstract class AbstractLevel implements KeyListener {
     }
 
     public void onUpdate() {
-        try {
-            for (int i = this.getComponents().size() - 1; i >= 0; i--) {
-                if (i > this.getComponents().size() - 1 || this.getComponents().get(i) == null ) continue;
-                if (!this.getComponents().get(i).toDelete) {
-                    this.getComponents().get(i).onUpdate();
-                }
-            }
+        this.getComponents().removeIf(i -> i.toDelete || i.isOutOfBorders());
 
-            for (int i = this.player.buffs.size() - 1; i >= 0; i--) {
-                this.player.buffs.get(i).onUpdate();
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        this.getComponents().forEach(ImageComponent::onUpdate);
     }
 
     public void addComponent(ImageComponent component) {
@@ -57,5 +46,6 @@ public abstract class AbstractLevel implements KeyListener {
         return Main.HEIGHT;
     }
 
-    public void draw(Graphics2D g) {}
+    public void draw(Graphics2D g) {
+    }
 }

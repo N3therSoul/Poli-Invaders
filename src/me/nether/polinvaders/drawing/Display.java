@@ -6,7 +6,6 @@ import me.nether.polinvaders.events.EventTick;
 import me.nether.polinvaders.levels.casta.LottaAllaCastaLevel;
 import me.nether.polinvaders.levels.AbstractLevel;
 import me.nether.polinvaders.menu.AbstractMenu;
-import me.nether.polinvaders.menu.types.Pause;
 import me.nether.polinvaders.utils.HasLifeBar;
 
 import javax.swing.*;
@@ -18,14 +17,11 @@ import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Display extends JPanel implements KeyListener, Runnable {
 
-    public final List<ImageComponent> OBJECTS = new ArrayList<>();
-
-    private final Font FONT_SCORE = new Font("Helvetica Neue", Font.BOLD, 40);
-    private final Font FONT_LEVEL = new Font("Helvetica Neue", Font.BOLD, 20);
+    public final List<ImageComponent> OBJECTS = new CopyOnWriteArrayList<>();
 
     public AbstractLevel currentLevel;
 
@@ -97,18 +93,22 @@ public class Display extends JPanel implements KeyListener, Runnable {
             paintShit(g);
         }
 
-        this.drawHud(g);
+        this.currentLevel.draw(g);
+
+        if (this.currentMenu != null) {
+            this.currentMenu.draw(g);
+        }
     }
 
     public void paintShit(Graphics g) {
         Graphics2D g2 = (Graphics2D) g.create();
         if (this.OBJECTS.size() <= 0) return;
 
-        this.OBJECTS.get(0).draw(g2);
+        this.OBJECTS.removeIf(i -> i.toDelete);
 
-        g.setColor(new Color(255, 0, 0, 200));
-        g.fillRect(0, (int) (Main.HEIGHT - Main.HEIGHT * this.currentLevel.player.bulletsRange) - 10, Main.WIDTH, 3);
+        this.OBJECTS.forEach(i -> i.draw(g2));
 
+        //TODO: java 8
         for (int i = this.OBJECTS.size() - 1; i >= 1; i--) {
             if (this.OBJECTS.get(i) == null || i > this.OBJECTS.size() - 1) continue;
 
@@ -132,78 +132,19 @@ public class Display extends JPanel implements KeyListener, Runnable {
             g.setColor(new Color(0, 0, 0, 150));
             g.fillRect((int) (e.x - e.width / 2) + 4, (int) (e.y - e.height / 2), (int) (e.width) - 8, 8);
 
-            float healthPercentage = e.lifePoints < 0 ? 0 : (float) e.lifePoints / e.maxLifePoints;
+            float healthPercentage = e.lifePoints < 0 ? 0 : e.lifePoints / e.maxLifePoints;
+            healthPercentage = healthPercentage > 1 ? 1 : healthPercentage < 0 ? 0 : healthPercentage;
 
             g.setColor(new Color(1 - 1 * healthPercentage, 1 * healthPercentage, 0, 0.8f));
             g.fillRect((int) (e.x - e.width / 2) + 6, (int) (e.y - e.height / 2), (int) ((e.width - 12) * healthPercentage), 6);
         }
 
+        g.setColor(new Color(255, 0, 0, 200));
+        g.fillRect(0, (int) (Main.HEIGHT -Main.HEIGHT * this.currentLevel.player.bulletsRange) - 10, Main.WIDTH, 3);
+
+
         this.lifeBars.clear();
     }
-
-    public void drawHud(Graphics2D g) {
-        Main.MAIN_FRAME.setBounds(Main.MAIN_FRAME.getX(), Main.MAIN_FRAME.getY(), Main.WIDTH, Main.HEIGHT);
-
-        g.setFont(FONT_SCORE);
-        g.setColor(Color.white);
-        g.drawString("" + this.currentLevel.score, 14, 40);
-        g.setFont(FONT_LEVEL);
-
-        List<AbstractBuff> buffs = this.currentLevel.player.buffs.stream().filter(b -> !b.isDebuff).collect(Collectors.toList());
-        List<AbstractBuff> debuffs = this.currentLevel.player.buffs.stream().filter(b -> b.isDebuff).collect(Collectors.toList());
-
-        g.setColor(new Color(99, 99, 99, 155));
-        g.fillRoundRect(2, Main.HEIGHT - 150, Main.WIDTH - 10, 118, 20, 20);
-
-        g.setColor(new Color(0, 0, 0, 155));
-        g.fillRect(0, Main.HEIGHT - 104, buffs.size() * 40 + 2, Main.HEIGHT);
-        g.fillRect(0, Main.HEIGHT - 184, debuffs.size() * 40 + 2, Main.HEIGHT - 104);
-
-        for (int i = 0; i < buffs.size(); i++) {
-            AbstractBuff buff = buffs.get(i);
-            buff.draw(g, 4 + i * 40, Main.HEIGHT - 76, 36, 36);
-            g.setColor(new Color(0, 0, 0, 155));
-            g.setColor(Color.black);
-            g.drawString(buff.currentStacks + "", 17 + i * 40, Main.HEIGHT - 47);
-
-            if (buff instanceof ActivatableBuff) {
-                g.setColor(Color.green);
-                g.drawString(((ActivatableBuff) buff).uses + "", 16 + i * 40, Main.HEIGHT - 48);
-            } else {
-                g.setColor(Color.yellow);
-                g.drawString(buff.currentStacks + "", 16 + i * 40, Main.HEIGHT - 48);
-            }
-
-            g.setColor(Color.white);
-            g.drawString(String.format("%.0fs", (buff.duration - buff.timer.getTimePassed()) / 1000.f), 8 + i * 40, Main.HEIGHT - 80);
-        }
-
-        for (int i = 0; i < debuffs.size(); i++) {
-            AbstractBuff buff = debuffs.get(i);
-            buff.draw(g, 4 + i * 40, Main.HEIGHT - 156, 36, 36);
-            g.setColor(new Color(0, 0, 0, 155));
-            g.setColor(Color.black);
-            g.drawString(buff.currentStacks + "", 17 + i * 40, Main.HEIGHT - 127);
-
-            if (buff instanceof ActivatableBuff) {
-                g.setColor(Color.green);
-                g.drawString(((ActivatableBuff) buff).uses + "", 16 + i * 40, Main.HEIGHT - 128);
-            } else {
-                g.setColor(Color.yellow);
-                g.drawString(buff.currentStacks + "", 16 + i * 40, Main.HEIGHT - 128);
-            }
-
-            g.setColor(Color.white);
-            g.drawString(String.format("%.0fs", (buff.duration - buff.timer.getTimePassed()) / 1000.f), 8 + i * 40, Main.HEIGHT - 160);
-        }
-
-        this.currentLevel.draw(g);
-
-        if (this.currentMenu != null) {
-            this.currentMenu.draw(g);
-        }
-    }
-
 
     @Override
     public void run() {
@@ -214,7 +155,6 @@ public class Display extends JPanel implements KeyListener, Runnable {
             loops = 0;
 
             while (System.currentTimeMillis() > next_game_tick && loops < MAX_FRAMESKIP) {
-
                 this.repaint();
                 if (!Main.paused)
                     this.currentLevel.onUpdate();

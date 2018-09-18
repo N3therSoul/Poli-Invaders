@@ -1,8 +1,21 @@
 package me.nether.polinvaders.utils;
 
 import java.awt.geom.Point2D;
+import java.util.function.Function;
 
 public class MathUtils {
+
+    //TODO: testare il corretto funzionamento
+    public static double range(double start, double finish, Function<Double, Double> f) {
+        if (start > finish) {
+            double temp = start;
+            start = finish;
+            finish = temp;
+        }
+
+        double difference = finish - start;
+        return start + f.apply(Math.random()) * difference;
+    }
 
     public static double range(double start, double finish) {
         if (start > finish) {
@@ -34,7 +47,9 @@ public class MathUtils {
     }
 
     public static double map(double x, double oldStart, double oldFinish, double newStart, double newFinish) {
-        return (x - oldStart) / (oldFinish - oldStart) * (newFinish - newStart) + newStart;
+        double result = (x - oldStart) / (oldFinish - oldStart) * (newFinish - newStart) + newStart;
+        if (result > newFinish) return newFinish;
+        else return result;
     }
 
 }

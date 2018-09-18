@@ -1,17 +1,17 @@
 package me.nether.polinvaders.drawing;
 
 import me.nether.polinvaders.Main;
-import me.nether.polinvaders.utils.HasLifeBar;
-import me.nether.polinvaders.utils.RenderUtils;
-import me.nether.polinvaders.utils.Timer;
+import me.nether.polinvaders.utils.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Entity extends ImageComponent {
 
-    public int protectionTime = 500;
-    public int lifePoints = 5, maxLifePoints = 5;
+    protected int ticksExisted = 0;
+
+    public int protectionTime = 0;
+    public float lifePoints = 5, maxLifePoints = 5;
 
     protected Timer timer = new Timer();
 
@@ -29,19 +29,20 @@ public class Entity extends ImageComponent {
 
     @Override
     public void onUpdate() {
+        this.ticksExisted++;
+
         if (this.toDelete) return;
 
         if (this.lifePoints <= 0) {
-            Main.DISPLAY.currentLevel.score += this.maxLifePoints;
+            Main.DISPLAY.currentLevel.score += this.maxLifePoints * 2;
             this.toDelete = true;
             this.onDeath();
             return;
         }
 
         if (timer.hasReach(protectionTime)) {
-            for (int i = Main.DISPLAY.OBJECTS.size() - 1; i >= 0; i--) {
-                if (i > Main.DISPLAY.OBJECTS.size() - 1) continue;
-                AbstractComponent object = Main.DISPLAY.OBJECTS.get(i);
+            for (ImageComponent object : Main.DISPLAY.OBJECTS) {
+
                 if (object instanceof Projectile) {
                     Projectile p = (Projectile) object;
                     if (p.lastHit == this) continue;
@@ -54,7 +55,7 @@ public class Entity extends ImageComponent {
                                 p.toDelete = true;
                             }
                             p.lastHit = this;
-                            this.lifePoints--;
+                            this.lifePoints -= Math.pow((p.width + p.height) / 50, 1.2);
                             return;
                         }
                     }
@@ -68,12 +69,27 @@ public class Entity extends ImageComponent {
 
     @Override
     public void draw(Graphics2D g) {
+        AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) MathUtils.map(this.ticksExisted, 0, 50, 0, 1));
+        g.setComposite(ac);
         super.draw(g);
 
-        if(!(this instanceof HasLifeBar)) return;
+        this.drawLifeBar(g);
+
+        this.drawHp(g);
+    }
+
+    protected void drawLifeBar(Graphics2D g) {
+        if (!(this instanceof HasLifeBar)) return;
 
         g.setFont(font1);
-        RenderUtils.drawStringWithShadow(g, "lvl: " + this.level, (int) (this.x - this.width/2 + 10), (int) (this.y - this.height/2 - 6), 0xffffffff);
+        RenderUtils.drawStringWithShadow(g, "lvl: " + this.level, (int) (this.x - this.width / 2 + 10), (int) (this.y - this.height / 2 - 6), 0xffffffff);
+    }
+
+    protected void drawHp(Graphics2D g) {
+        if (!(this instanceof ShowLifePoints)) return;
+
+        String hp = "HP: \247a" + (int) this.lifePoints;
+        RenderUtils.drawStringWithShadow(g, hp, (int) (this.x + this.width / 2 - RenderUtils.getStringWidth(g, hp) - 2), (int) (this.y - this.height / 2 - 6), 0xffffffff);
     }
 
     public void setupLifePoints(int lf) {
@@ -84,4 +100,6 @@ public class Entity extends ImageComponent {
     public void onDeath() {
 
     }
+
+
 }

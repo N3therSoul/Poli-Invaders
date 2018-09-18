@@ -59,7 +59,6 @@ public class StatButton extends AbstractButton implements MouseListener {
         if (this.isHovered(e.getX(), e.getY())) {
             ((LuigiDiMaio) Main.DISPLAY.currentLevel.player).spendablePoints--;
             this.init();
-            System.out.println("meme");
         }
     }
 

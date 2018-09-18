@@ -13,8 +13,8 @@ public class BombBuff extends ActivatableBuff {
 
     public int range;
 
-    public BombBuff(float x, float y, int width, int height, int range) {
-        super("Bomb_buff", x, y, width, height, "bombbuff.png", 60000);
+    public BombBuff(float x, float y, int width, int height, int range, int duration) {
+        super("Bomb_buff", x, y, width, height, "bombbuff.png", duration);
         this.maxDuration = 60000;
         this.uses = 3;
         this.maxUses = 3;
@@ -58,28 +58,28 @@ public class BombBuff extends ActivatableBuff {
         public void onUpdate() {
             super.onUpdate();
 
-            for (int i = Main.DISPLAY.OBJECTS.size() - 1; i >= 0; i--) {
-                AbstractComponent object = Main.DISPLAY.OBJECTS.get(i);
-                if (object instanceof Entity) {
-                    Entity e = (Entity) object;
-                    if (MathUtils.distance(e.x, e.y, this.x, this.y) <= this.width) {
-                        for (int i1 = Main.DISPLAY.OBJECTS.size() - 1; i1 >= 0; i1--) {
-                            ImageComponent imageComponent = Main.DISPLAY.OBJECTS.get(i1);
-                            if (imageComponent instanceof Entity) {
-                                Entity enemy = (Entity) imageComponent;
-
-                                if (MathUtils.distance(enemy.x, enemy.y, this.x, this.y) <= this.width * 5) {
-                                    enemy.lifePoints -= this.damage;
-                                }
-                            }
-                        }
-                        e.lifePoints -= damage * 4;
-                        this.toDelete = true;
-
-                        break;
-                    }
-                }
-            }
+//            for (int i = Main.DISPLAY.OBJECTS.size() - 1; i >= 0; i--) {
+//                AbstractComponent object = Main.DISPLAY.OBJECTS.get(i);
+//                if (object instanceof Entity) {
+//                    Entity e = (Entity) object;
+//                    if (MathUtils.distance(e.x, e.y, this.x, this.y) <= this.width) {
+//                        for (int i1 = Main.DISPLAY.OBJECTS.size() - 1; i1 >= 0; i1--) {
+//                            ImageComponent imageComponent = Main.DISPLAY.OBJECTS.get(i1);
+//                            if (imageComponent instanceof Entity) {
+//                                Entity enemy = (Entity) imageComponent;
+//
+//                                if (MathUtils.distance(enemy.x, enemy.y, this.x, this.y) <= this.width * 5) {
+//                                    enemy.lifePoints -= this.damage;
+//                                }
+//                            }
+//                        }
+//                        e.lifePoints -= damage * 4;
+//                        this.toDelete = true;
+//
+//                        break;
+//                    }
+//                }
+//            }
 
         }
     }

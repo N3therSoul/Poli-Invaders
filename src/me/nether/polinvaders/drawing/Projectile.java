@@ -36,16 +36,15 @@ public class Projectile extends ImageComponent {
 
     @Override
     public void onUpdate() {
-        if (this.y < Main.HEIGHT - Main.HEIGHT * Main.DISPLAY.currentLevel.player.bulletsRange)
-            toDelete = true;
-        else
-            super.onUpdate();
+        super.onUpdate();
 //        this.xSpeed = 5 * (float) Math.sin(this.y/20);
     }
 
     @Override
     public Point2D[] getBounds() {
         Point2D points[] = super.getBounds();
+
+        if(this.theta == 0) return points;
 
         return new Point2D[]{
                 MathUtils.rotatePoint(theta, points[0], x, y),

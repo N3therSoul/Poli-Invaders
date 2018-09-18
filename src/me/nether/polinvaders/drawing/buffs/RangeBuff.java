@@ -9,8 +9,8 @@ public class RangeBuff extends AbstractBuff {
 
     public float ratio;
 
-    public RangeBuff(float x, float y, int width, int height, float ratio) {
-        super("Range_Buff", x, y, width, height, "rangebuff.png", 5000);
+    public RangeBuff(float x, float y, int width, int height, float ratio, int duration) {
+        super("Range_Buff", x, y, width, height, "rangebuff.png", duration);
         this.ratio = ratio;
         this.maxDuration = 60000;
         this.stackable = true;

@@ -15,9 +15,11 @@ public class RobertoFico extends Entity implements HasLifeBar {
     public RobertoFico(float x, float y, int width, int height, int level) {
         super(x, y, width, height, "robertofico.png");
         timer.reset();
-        this.setupLifePoints(20);
         this.level = level;
+        this.setupLifePoints(20 * this.level);
     }
+
+    private int nextTimer = (int) MathUtils.range(1500, 7000);
 
     @Override
     public void onUpdate() {
@@ -26,8 +28,9 @@ public class RobertoFico extends Entity implements HasLifeBar {
 
         if (this.isOutOfBorders()) this.lifePoints = 0;
 
-        if (timer.hasReach(1000)) {
-            spawnBuff((int) MathUtils.range(0, 6));
+        if (timer.hasReach(nextTimer)) {
+            spawnBuff((int) MathUtils.range(0, 11));
+            nextTimer = (int) MathUtils.range(1500, 7000);
             timer.reset();
         }
 
@@ -50,39 +53,45 @@ public class RobertoFico extends Entity implements HasLifeBar {
 
         switch (id) {
             case 0:
+            case 1:
+            case 2:
+            case 3:
                 buff = new SpeedBuff(this.x, this.y,
                         60,
                         60,
-                        5);
+                        2,
+                        6000);
                 break;
-            case 1:
+            case 4:
+            case 5:
                 buff = new RangeBuff(this.x, this.y,
                         60,
                         60,
-                        1.05f);
+                        1.05f,
+                        15000);
                 break;
-            case 2:
+            case 6:
                 buff = new AngleBuff(this.x, this.y,
                         60,
                         60,
-                        0.5f);
+                        0.05f,
+                        5000);
                 break;
-            case 3:
+            case 7:
                 buff = new BombBuff(this.x, this.y,
                         60,
                         60,
-                        40);
+                        40,
+                        60000);
                 break;
-            case 4:
+            case 8:
+            case 9:
+            case 10:
                 buff = new SizeBuff(this.x, this.y,
                         60,
                         60,
-                        0.5f);
-                break;
-            case 5:
-                buff = new PerforationBuff(this.x, this.y,
-                        60,
-                        60);
+                        0.1f,
+                        10000);
                 break;
         }
         if (buff != null) {

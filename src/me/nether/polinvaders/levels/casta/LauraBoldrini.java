@@ -15,10 +15,12 @@ public class LauraBoldrini extends Entity implements HasLifeBar {
     public LauraBoldrini(float x, float y, int width, int height, int level) {
         super(x, y, width, height, "lauraboldrini.png");
         timer.reset();
-        this.lifePoints = 40;
         this.maxLifePoints = lifePoints;
         this.level = level;
+        this.setupLifePoints(15 * this.level);
     }
+
+    private int nextTimer = (int) MathUtils.range(1500, 7000);
 
     @Override
     public void onUpdate() {
@@ -27,8 +29,9 @@ public class LauraBoldrini extends Entity implements HasLifeBar {
 
         if (this.isOutOfBorders()) this.lifePoints = 0;
 
-        if (timer.hasReach(1000)) {
+        if (timer.hasReach(nextTimer)) {
             spawnBuff((int) MathUtils.range(0, 2));
+            nextTimer = (int) MathUtils.range(1500, 7000);
             timer.reset();
         }
 
@@ -55,25 +58,28 @@ public class LauraBoldrini extends Entity implements HasLifeBar {
                 buff = new AngleBuff(this.x, this.y,
                         60,
                         60,
-                        -1f);
+                        -45f,
+                        5000);
                 break;
             case 1:
                 buff = new SizeBuff(this.x, this.y,
                         60,
                         60,
-                        -0.2f);
+                        -0.2f,
+                        10000);
                 break;
             case 2:
                 buff = new SpeedBuff(this.x, this.y,
                         60,
                         60,
-                        -2);
+                        -2,
+                        6000);
                 break;
         }
         if (buff != null) {
             buff.duration = 5000;
-            buff.xAcc = Math.signum(Main.DISPLAY.currentLevel.player.x - this.x) * Math.abs(Main.DISPLAY.currentLevel.player.x - this.x) * 0.0005f;
-            buff.yAcc = Math.abs(Main.DISPLAY.currentLevel.player.y - this.y) * 0.0005f;
+            buff.xAcc = Math.signum(Main.DISPLAY.currentLevel.player.x - this.x) * Math.abs(Main.DISPLAY.currentLevel.player.x - this.x) * 0.0004f;
+            buff.yAcc = Math.abs(Main.DISPLAY.currentLevel.player.y - this.y) * 0.0004f;
             buff.isDebuff = true;
 //            buff.xSpeed = (float) MathUtils.map(Math.abs(Main.DISPLAY.currentLevel.player.x - this.x), 0, Main.WIDTH, 1, 3);
 //            buff.ySpeed = (float) MathUtils.map(Math.abs(Main.DISPLAY.currentLevel.player.y - this.y), 0, Main.HEIGHT, 1, 3);

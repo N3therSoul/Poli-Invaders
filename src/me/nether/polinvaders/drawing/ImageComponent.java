@@ -116,4 +116,10 @@ public class ImageComponent extends AbstractComponent {
     public boolean isOutOfBorders() {
         return !doNotCancel && (x + width / 2 < 0 || x - width / 2 > Main.WIDTH || y + height / 2 < 0 || y - height / 2 > Main.HEIGHT);
     }
+
+
+    public boolean isInsideRect(float px, float py) {
+        return px >= x - width/2 && px <= x + width/2 && py >= y - height/2 && py <= y + height/2;
+    }
+
 }
