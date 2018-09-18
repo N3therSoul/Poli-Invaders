@@ -7,69 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3212f8c-31ca-4db4-92aa-857d831f56b8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/EntityBoss.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/EmmaBonino.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MassimoDAlema.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MatteoSalvini.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/StefanoDiMartino.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/utils/ShowLifePoints.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/speedbuff.png" afterPath="$PROJECT_DIR$/assets/speedbuff.png" />
-      <change beforePath="$PROJECT_DIR$/assets/speedbuffa.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/AbstractComponent.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/AbstractComponent.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Display.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Display.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Entity.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Entity.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/ImageComponent.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/ImageComponent.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Projectile.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/Projectile.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/AngleBuff.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/AngleBuff.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/BombBuff$Bomb.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/BombBuff$Bomb.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/BombBuff.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/BombBuff.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/PerforationBuff.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/RangeBuff.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/RangeBuff.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/SizeBuff.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/SizeBuff.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/SpeedBuff.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/drawing/buffs/SpeedBuff.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/AbstractLevel.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/AbstractLevel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LauraBoldrini.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LauraBoldrini.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel$1.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LuigiDiMaio.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/LuigiDiMaio.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi$JobsAct.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi$JobsAct.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi$OttantaEuro.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi$OttantaEuro.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/MatteoRenzi.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/RobertoFico.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/levels/casta/RobertoFico.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Pause$1.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Pause$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Pause.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Pause.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop$1.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop$2.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/Shop.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/components/BasicButton.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/components/BasicButton.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/components/StatButton.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/menu/types/components/StatButton.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/utils/MathUtils.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/utils/MathUtils.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/utils/RenderUtils.class" afterPath="$PROJECT_DIR$/out/production/Poli Invaders/me/nether/polinvaders/utils/RenderUtils.class" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/AbstractComponent.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/AbstractComponent.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Display.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Display.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Entity.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Entity.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/ImageComponent.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/ImageComponent.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Projectile.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Projectile.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/AngleBuff.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/AngleBuff.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/BombBuff.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/BombBuff.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/PerforationBuff.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/RangeBuff.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/RangeBuff.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/SizeBuff.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/SizeBuff.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/SpeedBuff.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/drawing/buffs/SpeedBuff.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/AbstractLevel.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/AbstractLevel.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LauraBoldrini.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LauraBoldrini.java" />
       <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LuigiDiMaio.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LuigiDiMaio.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MatteoRenzi.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MatteoRenzi.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/RobertoFico.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/RobertoFico.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/Pause.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/Pause.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/Shop.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/Shop.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/components/BasicButton.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/components/BasicButton.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/components/StatButton.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/menu/types/components/StatButton.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/utils/MathUtils.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/utils/MathUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/nether/polinvaders/utils/RenderUtils.java" afterPath="$PROJECT_DIR$/src/me/nether/polinvaders/utils/RenderUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +28,8 @@
       <file leaf-file-name="LottaAllaCastaLevel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+            <state relative-caret-position="17">
+              <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#keyPressed#0;class#LottaAllaCastaLevel#0" expanded="false" />
@@ -102,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmmaBonino.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmmaBonino.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/EmmaBonino.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="187">
+              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -115,7 +53,7 @@
       <file leaf-file-name="AbstractLevel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/AbstractLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="408">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
@@ -125,11 +63,10 @@
       <file leaf-file-name="MassimoDAlema.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MassimoDAlema.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="158" column="31" lean-forward="true" selection-start-line="158" selection-start-column="31" selection-end-line="158" selection-end-column="31" />
+            <state relative-caret-position="2295">
+              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1537266338510" expanded="true" signature="2609:2707" ph="..." />
               </folding>
             </state>
           </provider>
@@ -138,7 +75,7 @@
       <file leaf-file-name="AbstractComponent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/AbstractComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="17">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
@@ -148,7 +85,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="102">
               <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
               <folding />
             </state>
@@ -158,18 +95,18 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="255">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="2091">
+              <caret line="142" column="29" lean-forward="false" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -178,7 +115,7 @@
       <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
+            <state relative-caret-position="68">
               <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
@@ -188,7 +125,7 @@
       <file leaf-file-name="ImageComponent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/ImageComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="85">
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
@@ -333,10 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -427,6 +360,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -577,8 +514,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="41" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -593,12 +529,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18259935" sideWeight="0.49560854" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18443497" sideWeight="0.49560854" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4435576" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.275" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2739872" sideWeight="0.5043915" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -606,7 +543,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -841,7 +777,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="68">
           <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
@@ -849,7 +785,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/ImageComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="85">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -858,23 +794,15 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/stream/Stream.java" />
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="255">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/EmmaBonino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/AbstractLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="408">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
@@ -882,7 +810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="102">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding />
         </state>
@@ -890,7 +818,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/AbstractComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
@@ -898,19 +826,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/MassimoDAlema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="158" column="31" lean-forward="true" selection-start-line="158" selection-start-column="31" selection-end-line="158" selection-end-column="31" />
+        <state relative-caret-position="2295">
+          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1537266338510" expanded="true" signature="2609:2707" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="142" column="29" lean-forward="false" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/LottaAllaCastaLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        <state relative-caret-position="17">
+          <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#keyPressed#0;class#LottaAllaCastaLevel#0" expanded="false" />
@@ -920,10 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/drawing/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/me/nether/polinvaders/levels/casta/EmmaBonino.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>

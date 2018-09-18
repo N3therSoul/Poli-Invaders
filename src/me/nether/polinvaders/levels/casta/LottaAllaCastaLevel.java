@@ -72,9 +72,7 @@ public class LottaAllaCastaLevel extends AbstractLevel {
 //        Collections.sort(this.getComponents(), Comparator.comparingDouble(o -> o.width * o.height));
 
         super.onUpdate();
-
-        this.score = 10000;
-
+        
         handleLoss();
 
         boolean isBoss = this.getComponents().stream().anyMatch(e -> e instanceof EntityBoss);
